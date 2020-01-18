@@ -1,0 +1,17 @@
+type Story {
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+  title: String!
+  content: String!
+  duration: Int
+  author: User!
+}
+
+type User {
+  id: ID! @id
+  email: String! @unique
+  password: String!
+  name: String!
+  stories: [Story!]!
+}

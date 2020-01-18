@@ -1,0 +1,32 @@
+mutation {
+  user1: createUser(data: {
+    email: "vince@gmail.com"
+    name: "Vince Howard"
+    password: "$2b$10$dqyYw5XovLjpmkYNiRDEWuwKaRAvLaG45fnXE5b3KTccKZcRPka2m" # "secret42"
+    posts: {
+      create: {
+        title: "YOOOOO SHES SO CUTE"
+        content: "https://images.unsplash.com/photo-1536590158209-e9d615d525e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+      }
+    }
+  }) {
+    id
+  }
+
+  user2: createUser(data: {
+    email: "randa@gmail.com"
+    name: "Randa"
+    password: "$2b$10$o6KioO.taArzboM44Ig85O3ZFZYZpR3XD7mI8T29eP4znU/.xyJbW"  # "secret43"
+    posts: {
+      create: [{
+        title: "Check this out"
+        content: "https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3934&q=80"
+      } {
+        title: "Holy shit my cats nuts"
+        content: "https://images.unsplash.com/photo-1561948955-570b270e7c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=859&q=80"
+      }]
+    }
+  }) {
+    id
+  }
+}
